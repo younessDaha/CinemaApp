@@ -1,18 +1,18 @@
 ﻿@model Actor
 
 @{
-    ViewData["Title"] = "Delete Actor";
+    ViewData["Title"] = "Confirm Actor Deletion";
 }
 
 <div class="row text">
     <div class="col-md-8 offset-2">
         <p>
-            <h4 class="text-info">Delete Confirmation for @Model.FullName</h4>
+            <h2 class="text-danger">Confirm Deletion of @Model.FullName</h2>
         </p>
         <div class="row">
             <div class="col-md-8">
                 <div class="form-group text-center">
-                    <img class="border-info rounded-circle img-scale" id="ProfilePicturePreview" />
+                    <img class="border-danger rounded-circle img-scale" id="ProfilePicturePreview" />
                 </div>
                 <div class="form-group mb-3">
                     <label asp-for="ProfilePictureUrl" class="control-label"></label>
@@ -32,8 +32,8 @@
                 <div class="form-group">
                     <form asp-action="Delete">
                         <input type="hidden" asp-for="Id" />
-                        <input type="submit" value="Confirm" class="btn btn-danger" />
-                        <a class="btn btn-outline-primary float-end" asp-action="Index">Show All</a>
+                        <input type="submit" value="Confirm Deletion" class="btn btn-danger" />
+                        <a class="btn btn-outline-secondary float-end" asp-action="Index">Back to All Actors</a>
                     </form>
                 </div>
             </div>
